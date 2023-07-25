@@ -1,0 +1,88 @@
+.scene {
+    position: relative;
+    background-size: cover;
+    height: 100vh;
+    overflow: hidden;
+
+
+    .menu {
+        position: absolute;
+        top: 30%;
+    }
+
+    .sceneGallery{
+        position: absolute;
+        inset: 0;
+        margin: auto;
+        width: 70%;
+        height: 90%;
+        text-align: center;
+
+        .heading{
+            span{
+                position: absolute;
+                right: 2rem;
+                cursor: pointer;
+            }
+        }
+        .gallery {
+            height: 90%;
+            overflow-y: scroll;
+            border: 1px solid black;
+            backdrop-filter: blur(20px);
+            padding: 1rem;
+    
+            //glass morph
+            background: rgba(255, 255, 255, 0.25);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(5px);
+            -webkit-backdrop-filter: blur(5px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+    
+            // display
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    
+            .sceneBox {
+                &:hover {
+                    box-sizing: content-box;
+                    border: 2px solid rgb(255, 255, 255, 0.3);
+                    border-radius: 0.3rem;
+                }
+            }
+    
+    
+    
+        }
+
+    }
+
+
+
+
+    
+
+    .musicControl{
+        width: 100%;
+        position: absolute;
+        bottom: -4rem;
+        transition: all 0.5s ease;
+
+        &:hover{
+            transform: translateY(-5rem)
+        }
+    }
+
+
+
+
+
+
+}
+
+//Hide Scene Menu 
+#hide {
+    display: none;
+  
+}
