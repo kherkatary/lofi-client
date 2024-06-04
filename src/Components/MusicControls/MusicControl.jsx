@@ -96,7 +96,6 @@ const MusicControl = () => {
             <div className="audioPlayer">
                 <ReactAudioPlayer
                     src={musicArr[cur].src}
-                    autoPlay
                     ref={audioPlayerRef}
                     volume={volume}
                     controls
