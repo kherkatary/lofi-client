@@ -1,12 +1,31 @@
 
 .container{
 
-    // display: flex;
+     display: grid;
+     grid-template-columns: 1fr 2fr;
     // flex-wrap: wrap;
     // align-items: center;
     // justify-content: space-evenly;
-    width: 50%;
+    width: 30%;
     text-align: center;
+    padding: 1rem;
+
+    .controlerLeft{
+      border: 2px solid rgb(255, 255, 255,0.5);
+      border-radius: 6px;
+      padding: 5%;
+    }
+
+
+    .radioImageBox{
+      width: 100%;
+
+      #radioImage{
+        width: 50%;
+        
+      }
+      
+    }
 
     .controller{
         display: flex;
@@ -16,7 +35,10 @@
             background-color: rgb(255, 255, 255,0.2);
             border: none;
             padding: 0.5rem;
-            border-radius: 50%;
+            aspect-ratio: 1/1;
+            width: fit-content;
+            height: fit-content;
+            border-radius: 10%;
             margin: 1rem;
             &:hover{
                 background-color: rgba(234, 154, 248, 0.3);
@@ -25,10 +47,72 @@
         }
     }
 
+    .audioPlayer{
+        display: none;
+    }
+
+    #range3 {
+        -webkit-appearance: none;
+        appearance: none; 
+        width: 50%;
+        cursor: pointer;
+        outline: none;
+        border-radius: 15px;
+        height: 20px;
+        height: 6px;
+        background: #ccc;
+      }
+      
+      #range3::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        appearance: none; 
+        height: 30px;
+        width: 30px;
+        background: transparent;
+        background-image: url("https://e7.pngegg.com/pngimages/531/94/png-clipart-volume-booster-pro-android-bass-booster-android-blue-text.png");
+        background-size: cover;
+        background-position: center;
+        border-radius: 50%;
+        transition: .2s ease-in-out;
+        transform: rotateZ(var(--thumb-rotate, 0deg));
+      }
+      
+      /* Thumb: Firefox */
+      #range3::-moz-range-thumb {
+        height: 30px;
+        width: 30px;
+        background: transparent;
+        background-image: url("https://ibaslogic.github.io/hosted-assets/smile.png");
+        background-size: cover;
+        border: none;
+        border-radius: 50%;
+        transform: rotateZ(var(--thumb-rotate, 0deg));
+        transition: .2s ease-in-out;
+      }
+      
+      #range3::-webkit-slider-thumb:hover {
+        box-shadow: 0 0 0 10px rgba(85, 1, 86, 0.1)
+      }
+      #range3:active::-webkit-slider-thumb {
+        box-shadow: 0 0 0 13px rgba(81, 1, 44, 0.2)
+      }
+      
+      #range3:focus::-webkit-slider-thumb {
+        box-shadow: 0 0 0 13px rgba(72, 1, 83, 0.2)
+      }
+      
+      #range3::-moz-range-thumb:hover {
+        box-shadow: 0 0 0 10px rgba(49, 1, 45, 0.1)
+      }
+      #range3:active::-moz-range-thumb {
+        box-shadow: 0 0 0 13px rgba(255,85,0, .2)
+      }
+      #range3:focus::-moz-range-thumb {
+        box-shadow: 0 0 0 13px rgba(255,85,0, .2)    
+      }
+
     .songName{
         cursor: pointer;
-        padding: 0.5rem;
-
         &:hover{
             p{
                 color: rgba(234, 154, 248, 0.6);

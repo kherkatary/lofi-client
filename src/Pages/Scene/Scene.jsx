@@ -2,23 +2,31 @@ import { useState } from "react";
 import { Menu, GalleryCard, MusicControl } from "../../Components";
 import sceneData from "../../data/scene.json"
 import { Icon } from '@iconify/react';
+import { useAuth } from "../../Context/AuthContext";
+
 
 import './Scene.scss'
+import { Navigate } from "react-router-dom";
 const Scene = () => {
-    const [wallpaper, setWall] = useState("https://img.freepik.com/free-vector/gradient-lo-fi-illustrations_52683-82981.jpg?w=1380&t=st=1690293360~exp=1690293960~hmac=cd5e2e7ae08e37023566749d05ca8d1ca09f306e76a9dee11e0a2a9f55b30448");
+    const [wallpaper, setWall] = useState("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGUyeGE5c3l4bzMyaXZyaWhhcjZreXUwNmx5dzdhc3JsOW5sdWM1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hQWrw0tOmiH8b5qMxm/giphy.webp");
 
     const [hideMenu, setHideMenu] = useState("hide");
     const { scene } = sceneData;
+    const {logOut, token}= useAuth()
 
     const bgStyle = {
         backgroundImage: `url(${wallpaper})`,
+        backgroundPosition: "center"
     }
+
+    if(!token) return <Navigate to='/login'/>
 
 
     return (
 
 
         <div className="scene" style={bgStyle}>
+       
 
             <div className="menu">
 
@@ -47,6 +55,7 @@ const Scene = () => {
 
             <div className="musicControl">
                 <MusicControl />
+                <button onClick={logOut}>LogOut</button>
             </div>
 
 

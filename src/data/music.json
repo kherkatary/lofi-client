@@ -1,0 +1,42 @@
+{
+    "music":[{
+        "id":1,
+        "name":"CHILLWAVE",
+        "src":"https://play.streamafrica.net/chillwave",
+        "image":"https://icdn2.streamafrica.net/boxradiostacks/0ba6e4ac4ddfd4854c432b4d44894e3a.jpg"
+    },
+
+    {
+        "id":2,
+        "name":"DREAMSCAPES",
+        "src":"https://play.streamafrica.net/dreamscapes",
+        "image":"https://icdn2.streamafrica.net/boxradiostacks/65597120afb18.jpg"
+    },
+
+    {
+        "id":3,
+        "name":"GAME RADIO",
+        "src":"https://play.streamafrica.net/gameradio1",
+        "image":"https://icdn2.streamafrica.net/boxradiostacks/dde8e8659d8b17b2.jpg"
+    },
+    {
+        "id":4,
+        "name":"JAPAN CITY POP",
+        "src":"https://play.streamafrica.net/japancitypop",
+        "image":"https://icdn2.streamafrica.net/boxradiostacks/b91d19608118b703.jpg"
+    },
+    {
+        "id":5,
+        "name":"Lofi Radio",
+        "src":"https://play.streamafrica.net/lofiradio",
+        "image":"https://play.streamafrica.net/lofiradio"
+    },
+    {
+        "id":6,
+        "name":"NCS Radio",
+        "src":" https://play.streamafrica.net/ncsradio",
+        "image":"https://icdn2.streamafrica.net/boxradiostacks/6cec4350a92be264d1169aad28838639.jpg"
+    }
+    
+    ]
+}

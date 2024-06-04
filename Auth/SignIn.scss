@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poiret+One&display=swap');
+
+.mainCon {
+    background-color: rgb(2, 0, 36);
+    background-image: url("https://i.giphy.com/DvyxIpxw9cCuQ.webp");
+    background-repeat: no-repeat;
+    background-size: cover;
+    // background: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(101, 2, 115, 1) 50%, rgba(0, 212, 255, 1) 100%);
+    height: 100vh;
+    width: 100vw;
+
+
+    #form-container {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 30rem;
+        height: fit-content;
+        background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 20px;
+        border: 1px solid rgba(255, 255, 255, 0.18);
+        box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        overflow: hidden;
+        padding: 20px;
+
+        @media screen and (max-width:700px) {
+            width: 80%;
+            height: 80%;
+            
+        }
+
+        .title {
+            font-weight: 800;
+            font-size: 40pt;
+        }
+
+        .msg {
+            margin: 10px;
+        }
+
+        input {
+            background-color: transparent;
+            border: none;
+            height: 30px;
+            width: 90%;
+            border-bottom: solid 2px #fff;
+            margin: 10px;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        a {
+            color: rgb(190, 173, 250);
+            text-decoration: none;
+            font-weight: 800;
+        }
+
+        .label {
+            margin-top: 20px;
+        }
+
+        .submit {
+            margin-top: 70px;
+            color: #fff;
+            height: 40px;
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border-radius: 5px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+        }
+
+        input:focus {
+            border-bottom: 2px solid #fff;
+            outline: none;
+            font-size: 16px;
+            color: #fff;
+        }
+
+        .submit:hover {
+            background-color: rgb(255, 255, 255);
+            color: #000;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+    }
+
+    /* -----  Form content  ------ */
+
+
+
+}
+
+
+
+/* --------- Form ----------- */
