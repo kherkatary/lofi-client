@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&display=swap');
+
+.loginBox{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(400px,1fr));
+    background-color: red;
+    .leftSide{
+        background-image: url("https://images.unsplash.com/photo-1602416222941-a72a356dab04?q=80&w=2576&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        font-family: "Jersey 10", sans-serif;
+    }
+}

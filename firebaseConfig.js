@@ -1,12 +1,13 @@
  import { initializeApp } from "firebase/app";
  const firebaseConfig = {
-    apiKey: "AIzaSyDbNvwvHtl6cYYw9wnLpOInvPTME6ezsUw",
-    authDomain: "lofihub-86b00.firebaseapp.com",
-    projectId: "lofihub-86b00",
-    storageBucket: "lofihub-86b00.appspot.com",
-    messagingSenderId: "242838990968",
-    appId: "1:242838990968:web:32d891f83a99f64196fd8d",
-    measurementId: "G-C86QKPR0C1"
-  };
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
+  authDomain: import.meta.env.VITE_FIREBASE_AUTH_DOMAIN,
+  projectId: import.meta.env.VITE_FIREBASE_PROJECT_ID,
+  storageBucket: import.meta.env.VITE_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: import.meta.env.VITE_FIREBASE_MESSAGING_SENDER_ID,
+  appId: import.meta.env.VITE_FIREBASE_APP_ID,
+  measurementId: import.meta.env.VITE_FIREBASE_MEASUREMENT_ID
+};
+
 
  export  const app = initializeApp(firebaseConfig);

@@ -8,7 +8,7 @@ import { useAuth } from "../../Context/AuthContext";
 import './Scene.scss'
 import { Navigate } from "react-router-dom";
 const Scene = () => {
-    const [wallpaper, setWall] = useState("https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExMGUyeGE5c3l4bzMyaXZyaWhhcjZreXUwNmx5dzdhc3JsOW5sdWM1YyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/hQWrw0tOmiH8b5qMxm/giphy.webp");
+    const [wallpaper, setWall] = useState("https://images.unsplash.com/photo-1573455494060-c5595004fb6c?q=80&w=2640&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
 
     const [hideMenu, setHideMenu] = useState("hide");
     const { scene } = sceneData;
@@ -55,7 +55,7 @@ const Scene = () => {
 
             <div className="musicControl">
                 <MusicControl />
-                <button onClick={logOut}>LogOut</button>
+
             </div>
 
 

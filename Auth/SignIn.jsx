@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './SignIn.scss'
+import './styles.scss'
 import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../src/Context/AuthContext';
@@ -48,9 +49,13 @@ const SignIn = () => {
 
 
   return (
-    <div className='mainCon'>
-       
+    <div className='loginBox'>
 
+    <div className='leftSide'>
+    <h1>Welcome to Lofi Hub</h1>
+    <h2>Play Lofi Music 24x7</h2>
+    </div>
+    <div className='mainCon'>
       <div id="form-container">
       <h1 className="title">Sign in</h1>
        <div style={{color:"red"}}>{status}</div>
@@ -64,6 +69,10 @@ const SignIn = () => {
 			<div className="label msg">◆ You dont have an account? <a href="#">Sign up</a></div>
       </Link>
        </div>
+    </div>
+       
+
+      
     </div>
   )
 }
