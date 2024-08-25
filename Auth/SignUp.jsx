@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './SignIn.scss'
+
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 import { Link, useNavigate } from 'react-router-dom';
 import { useAuth } from '../src/Context/AuthContext';

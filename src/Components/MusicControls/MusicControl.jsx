@@ -14,33 +14,40 @@ const MusicControl = () => {
     const [cur,setCur]= useState(3)
     
 
-    const nextMusic=()=>{
-      if(cur+1>musicArr.length) setCur(0);
-      else setCur(cur+1)
-
-    }
-
-    const prevMusic=()=>{
-      if(cur-1<0) setCur(musicArr.length-1);
-      else setCur(cur-1)
-    }
-
-
+    const nextMusic = () => {
+        if (cur + 1 >= musicArr.length) {
+            setCur(0); // Wrap around to the first item
+        } else {
+            setCur(cur + 1); // Move to the next item
+        }
+        setPlaying(false); // Pause the music when changing tracks
+    };
+    
+    const prevMusic = () => {
+        if (cur - 1 < 0) {
+            setCur(musicArr.length - 1); // Wrap around to the last item
+        } else {
+            setCur(cur - 1); // Move to the previous item
+        }
+        setPlaying(false); // Pause the music when changing tracks
+    };
+    
     const handlePlay = () => {
         audioPlayerRef.current.audioEl.current.play();
-        setPlaying(true);
+        setPlaying(true); // Set playing state to true when music starts playing
     };
-
+    
     const handlePause = () => {
         audioPlayerRef.current.audioEl.current.pause();
-        setPlaying(false);
+        setPlaying(false); // Set playing state to false when music is paused
     };
-
+    
     const handleVolumeChange = (event) => {
         const newVolume = event.target.value;
-        setVolume(newVolume);
-        audioPlayerRef.current.audioEl.current.volume = newVolume;
+        setVolume(newVolume); // Update the volume state
+        audioPlayerRef.current.audioEl.current.volume = newVolume; // Set the volume on the audio element
     };
+    
 
     return (
         <div className="container">

@@ -8,4 +8,9 @@
     background-color: rgb(231, 136, 244,0.1);
     backdrop-filter: blur(20px);
 
+    .card-img-top{
+        aspect-ratio: 4/2;
+        object-fit: cover;
+    }
+
 }
